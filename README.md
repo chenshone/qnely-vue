@@ -32,4 +32,15 @@ yarn build
 
 2.  更改插件的样式（样式穿透）
 
-    `.wrapper >>> .swiper-pagination-bullet-activebackground: #fff`
+    ```stylus
+    .wrapper >>> .swiper-pagination-bullet-active
+      background #fff
+    ```
+
+3.  预留组件高度
+
+    ```css
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 37.09%;
+    ```
