@@ -1,5 +1,7 @@
 # qnrlyw-vue
+vue全家桶实战项目
 
+参考慕课网
 ## Project setup
 ```
 yarn install
@@ -14,6 +16,3 @@ yarn serve
 ```
 yarn build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
