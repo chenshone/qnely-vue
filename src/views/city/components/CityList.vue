@@ -59,7 +59,7 @@
     },
     methods: {
       handleCityClick(city) {
-        this.changeCity('changeCity', city)
+        this.changeCity(city)
         this.$router.push('/')
       },
       ...mapMutations(['changeCity'])

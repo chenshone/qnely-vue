@@ -21,7 +21,7 @@
 
   import axios from 'axios'
   import Bscroll from 'better-scroll'
-
+  import { mapState } from 'vuex'
   export default {
     name: 'Home',
     components: {
@@ -36,12 +36,18 @@
         swiperList: [],
         iconList: [],
         recommendList: [],
-        weekendList: []
+        weekendList: [],
+        lastCity: ''
       }
+    },
+    computed: {
+      ...mapState(['city'])
     },
     methods: {
       getHomeInfo() {
-        axios.get('/static/mock/index.json').then(this.getHomeInfoSucc)
+        axios
+          .get('/static/mock/index.json?city=' + this.city)
+          .then(this.getHomeInfoSucc)
       },
       getHomeInfoSucc(res) {
         res = res.data
@@ -55,8 +61,15 @@
       }
     },
     mounted() {
+      this.lastCity = this.city
       this.scroll = new Bscroll(this.$refs.wrapper)
       this.getHomeInfo()
+    },
+    activated() {
+      if (this.lastCity !== this.city) {
+        this.lastCity = this.city
+        this.getHomeInfo()
+      }
     }
   }
 </script>
