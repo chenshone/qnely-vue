@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <div class="my-wrapper" ref="wrapper">
       <div class="content">
         <home-swiper :list="swiperList"></home-swiper>
@@ -33,7 +33,6 @@
     },
     data() {
       return {
-        city: '',
         swiperList: [],
         iconList: [],
         recommendList: [],
@@ -48,7 +47,6 @@
         res = res.data
         if (res.ret && res.data) {
           const data = res.data
-          this.city = data.city
           this.swiperList = data.swiperList
           this.iconList = data.iconList
           this.recommendList = data.recommendList
@@ -73,7 +71,7 @@
     .my-wrapper
       overflow hidden
       position absolute
-      top .88rem
+      top .85rem
       left 0
       right 0
       bottom 0

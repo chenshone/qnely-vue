@@ -41,6 +41,12 @@
         timer: null
       }
     },
+    methods: {
+      handleCityClick(city) {
+        this.$store.commit('changeCity', city)
+        this.$router.push('/')
+      }
+    },
     computed: {
       hasNoData() {
         return !this.list.length
