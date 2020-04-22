@@ -11,6 +11,7 @@ module.exports = {
       .set('assets', resolve('src/assets'))
       .set('components', resolve('src/components'))
       .set('styles', resolve('src/assets/styles'))
+      .set('views', resolve('src/views'))
   },
 
   publicPath: './'
