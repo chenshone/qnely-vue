@@ -62,7 +62,7 @@
     },
     mounted() {
       this.lastCity = this.city
-      this.scroll = new Bscroll(this.$refs.wrapper)
+      this.scroll = new Bscroll(this.$refs.wrapper, { mouseWheel: true })
       this.getHomeInfo()
     },
     activated() {
