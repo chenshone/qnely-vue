@@ -14,5 +14,5 @@ module.exports = {
       .set('views', resolve('src/views'))
   },
 
-  publicPath: './'
+  publicPath: process.env.NODE_ENV === 'production' ? '/qnelyw-vue/' : '/'
 }
