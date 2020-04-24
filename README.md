@@ -4,6 +4,8 @@ vue 全家桶实战项目
 
 参考慕课网
 
+[在线演示(移动端)](https://chenshone.github.io/qnely-vue)
+
 ## Project setup
 
 ```

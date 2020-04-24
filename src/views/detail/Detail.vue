@@ -36,7 +36,7 @@
     methods: {
       getDetailInfo() {
         axios
-          .get('/static/mock/detail.json', {
+          .get('/qnely-vue/static/mock/detail.json', {
             params: {
               id: this.$route.params.id
             }

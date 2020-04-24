@@ -46,7 +46,7 @@
     methods: {
       getHomeInfo() {
         axios
-          .get('/static/mock/index.json?city=' + this.city)
+          .get('/qnely-vue/static/mock/index.json?city=' + this.city)
           .then(this.getHomeInfoSucc)
       },
       getHomeInfoSucc(res) {
